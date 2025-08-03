@@ -1,5 +1,5 @@
 type ButtonProps = {
-  onClick: () => void;
+  onClick: () => void; //this is the default structure
   disabled?: boolean;
   label: string;
   addClass?: string;
