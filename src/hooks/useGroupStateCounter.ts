@@ -7,7 +7,7 @@ type CounterState ={
   time: string;
 }
 
-export const useAdvancedCounter = () => {
+export const useGroupStateCounter = () => {
 
   const [state, setState] = useState<CounterState>({
     count:0,

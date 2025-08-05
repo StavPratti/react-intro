@@ -19,8 +19,8 @@ const initialState: CounterState = {
 
 const getCurrentTime = () => new Date().toLocaleTimeString();
 
-function reducer(state:CounterState, action:Action): CounterState {
- switch (action.type) {
+function reducer(state:CounterState, dispatch:Action): CounterState {
+ switch (dispatch.type) {
    case "INCREASE":
      return {
        count: state.count + 1,
