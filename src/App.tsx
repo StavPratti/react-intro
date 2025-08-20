@@ -37,6 +37,7 @@ import RouterLayout from "./components/RouterLayout.tsx";
 // import MultiFieldFormWithReactHook from "./components/MultiFieldFormWithReactHook.tsx";
 import ProductList from "@/pages/ProductList.tsx";
 import Product from "@/pages/Product.tsx";
+import {AuthProvider} from "@/context/AuthProvider.tsx";
 
 function App() {
 
@@ -73,7 +74,7 @@ function App() {
 
             {/*</Layout>*/}
 
-
+           <AuthProvider>
             <BrowserRouter>
                 <Routes>
                     {/*<Route element={<RouterLayout />}>*/}
@@ -109,8 +110,18 @@ function App() {
                         <Route path=":productId" element={<Product mode="edit" />}/>
                     </Route>
 
+                    {/*<Route path="products" element={<ProtectedRoute />}>*/}
+                    {/*    <Route index element={<ProductListPage />} />*/}
+                    {/*    <Route path="new" element={<ProductPage mode="create" />} />*/}
+                    {/*    <Route*/}
+                    {/*        path=":productId"*/}
+                    {/*        element={<ProductPage mode="edit" />}*/}
+                    {/*    />*/}
+                    {/*</Route>*/}
+
                 </Routes>
             </BrowserRouter>
+           </AuthProvider>
 
         </>
     )
